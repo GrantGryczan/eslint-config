@@ -1,5 +1,6 @@
 const fs = require('fs');
+const path = require('path');
 
 module.exports = JSON.parse(
-	fs.readFileSync('./.eslintrc', 'utf8')
+	fs.readFileSync(path.join(__dirname, '.eslintrc'), 'utf8')
 );
