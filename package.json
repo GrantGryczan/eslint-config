@@ -23,5 +23,8 @@
 	"homepage": "https://github.com/GrantGryczan/eslint-config#readme",
 	"peerDependencies": {
 		"eslint": ">=8"
+	},
+	"devDependencies": {
+		"@grantgryczan/eslint-config": "."
 	}
 }
