@@ -1,0 +1,24 @@
+{
+	"name": "@grantgryczan/eslint-config",
+	"version": "1.0.0",
+	"description": "My ESLint config",
+	"main": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/GrantGryczan/eslint-config.git"
+	},
+	"keywords": [
+		"eslint",
+		"eslintconfig",
+		"config"
+	],
+	"author": "GrantGryczan",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/GrantGryczan/eslint-config/issues"
+	},
+	"homepage": "https://github.com/GrantGryczan/eslint-config#readme",
+	"peerDependencies": {
+		"eslint": ">=8"
+	}
+}
