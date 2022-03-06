@@ -20,5 +20,9 @@
 	"homepage": "https://github.com/GrantGryczan/eslint-config#readme",
 	"peerDependencies": {
 		"eslint": ">=8"
+	},
+	"dependencies": {
+		"@typescript-eslint/eslint-plugin": "^5.13.0",
+		"@typescript-eslint/parser": "^5.13.0"
 	}
 }

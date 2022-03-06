@@ -1,9 +1,6 @@
 {
 	"root": true,
-	"extends": [
-		"eslint:recommended",
-		"next"
-	],
+	"extends": "eslint:recommended",
 	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
 		"ecmaVersion": 2020,
