@@ -3,7 +3,7 @@
 To use this ESLint config, run the following command.
 
 ```sh
-npm i --save-dev @grantgryczan/eslint-config
+npm i --save-dev eslint @grantgryczan/eslint-config
 ```
 
 Then create an `.eslintrc` file with the following contents.
