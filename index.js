@@ -10,29 +10,44 @@ const isInstalled = id => {
 const typescriptInstalled = isInstalled('typescript');
 const reactInstalled = isInstalled('react');
 const nextInstalled = isInstalled('next');
+const reactNotNextInstalled = reactInstalled && !nextInstalled;
 
 module.exports = {
 	root: true,
 	extends: [
 		'eslint:recommended',
-		...nextInstalled ? ['next'] : []
+		...nextInstalled ? [
+			'next'
+		] : [],
+		...reactNotNextInstalled ? [
+			'plugin:react/recommended',
+			'plugin:react-hooks/recommended'
+		] : []
 	],
 	...typescriptInstalled && {
-		parser: '@typescript-eslint/parser',
-		parserOptions: {
-			ecmaVersion: 2020,
+		parser: '@typescript-eslint/parser'
+	},
+	parserOptions: {
+		ecmaVersion: 2020,
+		...typescriptInstalled && {
 			sourceType: 'module',
-			...reactInstalled && {
-				ecmaFeatures: {
-					jsx: true
-				}
-			},
 			project: 'tsconfig.json'
 		},
-		plugins: [
-			'@typescript-eslint'
-		],
+		...reactInstalled && {
+			ecmaFeatures: {
+				jsx: true
+			}
+		}
 	},
+	plugins: [
+		...typescriptInstalled ? [
+			'@typescript-eslint'
+		] : [],
+		...reactNotNextInstalled ? [
+			'react',
+			'react-hooks'
+		] : []
+	],
 	ignorePatterns: [
 		'node_modules',
 		'dist',
@@ -42,6 +57,20 @@ module.exports = {
 			'public'
 		] : []
 	],
+	...!nextInstalled && {
+		env: {
+			// It isn't very precise to assume the environment is both the browser and Node, but in the worst case, this can be overwritten in the dependent's own `.eslintrc`.
+			browser: true,
+			node: true
+		},
+		...reactInstalled && {
+			settings: {
+				react: {
+					version: 'detect'
+				}
+			}
+		}
+	},
 	rules: {
 		'no-async-promise-executor': 'off',
 		'no-cond-assign': 'off',
