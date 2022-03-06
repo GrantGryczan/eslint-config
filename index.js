@@ -33,6 +33,15 @@ module.exports = {
 			'@typescript-eslint'
 		],
 	},
+	ignorePatterns: [
+		'node_modules',
+		'dist',
+		...nextInstalled ? [
+			'.next',
+			'next-env.d.ts',
+			'public'
+		] : []
+	],
 	rules: {
 		'no-async-promise-executor': 'off',
 		'no-cond-assign': 'off',
