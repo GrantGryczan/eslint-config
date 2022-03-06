@@ -1,7 +1,7 @@
 {
 	"name": "@grantgryczan/eslint-config",
 	"version": "1.0.0",
-	"description": "My ESLint config",
+	"description": "Grant Gryczan's ESLint config",
 	"main": "index.js",
 	"repository": {
 		"type": "git",
@@ -10,7 +10,10 @@
 	"keywords": [
 		"eslint",
 		"eslintconfig",
-		"config"
+		"config",
+		"grantgryczan",
+		"grant",
+		"gryczan"
 	],
 	"author": "GrantGryczan",
 	"license": "MIT",

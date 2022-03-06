@@ -1,2 +1,2 @@
-# eslint-config
-My ESLint config
+# Grant Gryczan's ESLint Config
+Pretty self-explanatory.
