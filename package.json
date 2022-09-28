@@ -1,6 +1,6 @@
 {
 	"name": "@grantgryczan/eslint-config",
-	"version": "1.0.2",
+	"version": "1.1.0",
 	"description": "Grant Gryczan's ESLint config",
 	"main": "index.js",
 	"repository": {

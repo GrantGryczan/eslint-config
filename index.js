@@ -161,10 +161,7 @@ module.exports = {
 			'error',
 			'never'
 		],
-		'eol-last': [
-			'warn',
-			'never'
-		],
+		'eol-last': 'warn',
 		'func-call-spacing': [
 			'error',
 			'never'
